@@ -33,19 +33,6 @@ function ListView() {
             return comp;
     });
 
-    const sortedMeals = [...filteredMeals].sort((a, b) => {
-        if (sortBy === 'name') {
-            return sortOrder === 'asc'
-                ? a.strMeal.localeCompare(b.strMeal)
-                : b.strMeal.localeCompare(a.strMeal);
-        }
-        if (sortBy === 'category') {
-            return sortOrder === 'asc'
-                ? a.strCategory.localeCompare(b.strCategory)
-                : b.strCategory.localeCompare(a.strCategory);
-        }
-        return 0;
-    });
 
     return (
         <div className="list-view">
